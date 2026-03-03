@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoolTech HVAC Solutions</title>
   <style>
-
-    body{
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: gray;
-        color: darkblue;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: gray;
+      color: darkblue;
     }
 
-    nav{
-        background-color: #FFA500;
-        padding: 14px 30px;
-        position: sticky;
-        top: 0;
+    nav {
+      background-color: #FFA500;
+      padding: 14px 30px;
+      position: sticky;
+      top: 0;
     }
 
-    .nav-logo{
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        text-decoration: none;
+    .nav-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
     }
 
-    nav a{
-        color: white;
-        text-decoration: none;
-        margin-right: 24px;
-        font-size: 15px;
-    } 
-
-    nav a:hover{
-        color: #4ab3d4;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 24px;
+      font-size: 15px;
     }
 
-    .hero{
-        background-color: white;
-        color: darkblue;
-        text-align: center;
-        padding: 60px 20px;
+    nav a:hover {
+      color: #4ab3d4;
     }
 
-    .hero img{
-        height: 200px;
-        width: 400px;
-        margin-bottom: 16px;
+    .hero {
+      background-color: white;
+      color: darkblue;
+      text-align: center;
+      padding: 60px 20px;
     }
 
-    .hero h1{
-        font-size: 42px;
-        margin: 0 0 10px 0;
+    .hero img {
+      height: 200px;
+      width: 400px;
+      margin-bottom: 16px;
     }
 
-    .hero h1 span{
-        color: #4ab3d4;
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
     }
 
-    .hero p{
-        font-size: 17px;
-        color: #a0b8cc;
-        max-width: 500px;
-        margin: 0 auto;
-        line-height: 1.6;
+    .hero h1 span {
+      color: #4ab3d4;
     }
 
-    .s{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: space-between;
-        background-color:#0d1f3c;
-        color:orange;
-        text-align: left;
-        padding: 60px 20px;
+    .hero p {
+      font-size: 17px;
+      color: #a0b8cc;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    .s img{
-      height:500px;
+    .s {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #0d1f3c;
+      color: orange;
+      text-align: left;
+      padding: 60px 20px;
+    }
+
+    .s img {
+      height: 500px;
       width: 350px;
       border-radius: 12px;
     }
 
-    ul{
+    ul {
       list-style: none;
       padding: 0;
     }
 
-    ul li{
-      border-left: 4px solid #4ab3d4; /* orange to match your navbar */
+    ul li {
+      border-left: 4px solid #4ab3d4;
+      /* orange to match your navbar */
       padding-left: 15px;
       margin-bottom: 20px;
     }
@@ -119,9 +120,79 @@
       color: #0d1f3c;
     }
 
+    .quote {
+      background-color: #0d1f3c;
+      color: white;
+      padding: 60px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
+    .quote h2 {
+      color: #FFA500;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .quote p {
+      color: #a0b8cc;
+      margin-bottom: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #a0b8cc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    input,
+    select,
+    textarea {
+      background-color: #112240;
+      border: 1.5px solid #1e3a5f;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #FFA500;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #FFA500;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e09400;
+    }
   </style>
 </head>
+
 <body>
   <nav>
     <a href="#" class="nav-logo">CoolTech HVAC</a>
@@ -135,42 +206,81 @@
 
     <img src="HVAC.png" alt="CoolTech HVAC Logo">
     <h1>Cool<span>Tech</span> HVAC</h1>
-    <p>Family-owned heating and cooling experts serving the broader Nashville community for over 15 years. Reliable, affordable, and here when you need us.</p>
+    <p>Family-owned heating and cooling experts serving the broader Nashville community for over 15 years. Reliable,
+      affordable, and here when you need us.</p>
   </div>
 
-  
+
 
   <div class="s">
     <div>
-    
-    <h2>Services</h2>
-    <p>Below are service offered by CoolTech HVAC Solutions. </p>
-    <ul>
-      <li>
-        <p> <strong>AC Repair</strong>: Fast diagnosis and repair for all makes and models. We'll have your AC running again the same day.</p>
-      </li>
-      <li>
-       
-        <p> <strong>Furnace Installation</strong>: Energy-efficient furnace replacements and new installations for any home size or budget.</p>
-      </li>
-      <li>
-        
-        <p><strong>Air Duct Cleaning</strong>: Remove dust, allergens, and debris from your ductwork to improve air quality and system efficiency.</p>
-      </li>
-      <li>
-        
-        <p><strong>Routine Maintenance</strong>: Seasonal tune-ups to keep your system running smoothly and prevent costly breakdowns.</p>
-      </li>
-    </ul>
-  </div>
+
+      <h2>Services</h2>
+      <p>Below are service offered by CoolTech HVAC Solutions. </p>
+      <ul>
+        <li>
+          <p> <strong>AC Repair</strong>: Fast diagnosis and repair for all makes and models. We'll have your AC running
+            again the same day.</p>
+        </li>
+        <li>
+
+          <p> <strong>Furnace Installation</strong>: Energy-efficient furnace replacements and new installations for any
+            home size or budget.</p>
+        </li>
+        <li>
+
+          <p><strong>Air Duct Cleaning</strong>: Remove dust, allergens, and debris from your ductwork to improve air
+            quality and system efficiency.</p>
+        </li>
+        <li>
+
+          <p><strong>Routine Maintenance</strong>: Seasonal tune-ups to keep your system running smoothly and prevent
+            costly breakdowns.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="quote">
+      <h2>Request a Free Quote</h2>
+      <p>Fill out the form below and we'll get back to you within 2 hours.</p>
+
+      <form>
+        <label>First Name</label>
+        <input type="text" placeholder="Jane">
+
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith">
+
+        <label>Email</label>
+        <input type="email" placeholder="jane@email.com">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="(555) 000-0000">
+
+        <label>Service Needed</label>
+        <select>
+          <option>Select a service...</option>
+          <option>AC Repair</option>
+          <option>Furnace Installation</option>
+          <option>Air Duct Cleaning</option>
+          <option>Routine Maintenance</option>
+        </select>
+
+        <label>Additional Details</label>
+        <textarea placeholder="Describe your issue or project..."></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
 
     <img src="hvacimg267.jpg" alt="HVAC System">
-  
+
   </div>
 
   <div class="banner">
     Spring AC Tune-Up Special — $79 (Save $40) — Limited Time! <a href="#">Book Now</a>
   </div>
-  
+
 </body>
+
 </html>
