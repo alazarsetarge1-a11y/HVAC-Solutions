@@ -39,7 +39,7 @@
     }
 
     .hero {
-      background: linear-gradient(180deg, #ffffff 60%, #0d1f3c);      
+      background: linear-gradient(180deg, #ffffff 60%, #0d1f3c);
       color: darkblue;
       text-align: center;
       padding: 60px 20px;
@@ -210,8 +210,9 @@
 
     <img src="HVAC.png" alt="CoolTech HVAC Logo">
     <h1>Cool<span>Tech</span> HVAC</h1>
-    <p><strong>Family-owned heating and cooling experts serving the broader Nashville community for over 15 years. Reliable,
-      affordable, and here when you need us.</strong></p>
+    <p><strong>Family-owned heating and cooling experts serving the broader Nashville community for over 15 years.
+        Reliable,
+        affordable, and here when you need us.</strong></p>
   </div>
 
 
@@ -287,6 +288,28 @@
     Spring AC Tune-Up Special — $79 (Save $40) — Limited Time! <a href="#">Book Now</a>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    document.querySelectorAll('form').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        form.reset();
+        alert('Your request has been submitted! We will get back to you within 2 hours.');
+      });
+    });
+  </script>
 </body>
 
 </html>
