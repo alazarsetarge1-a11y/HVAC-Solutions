@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoolTech HVAC Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0d1f3c;
+      color: white;
+    }
+
+    nav {
+      background-color: #FFA500;
+      padding: 14px 30px;
+      position: sticky;
+      top: 0;
+    }
+
+    .nav-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 24px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #4ab3d4;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #ffffff 90%, #0d1f3c);
+      color: darkblue;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      height: 200px;
+      width: 400px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 10px 0;
+    }
+
+    .hero h1 span {
+      color: #4ab3d4;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: darkblue;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .s {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(180deg,#0d1f3c, #1a3a6e);
+      color: orange;
+      text-align: left;
+      padding: 60px 20px;
+    }
+
+   
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      border-left: 4px solid #4ab3d4;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    ul li:hover {
+      padding-left: 22px;
+    }
+
+    .banner {
+      background-color: #FFA500;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .banner a {
+      color: white;
+      font-weight: bold;
+      margin-left: 8px;
+      text-decoration: underline;
+    }
+
+    .banner a:hover {
+      color: #0d1f3c;
+    }
+
+    .quote {
+      background: linear-gradient(180deg, #1a3a6e, #0d1f3c);
+      color: white;
+      padding: 60px 40px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .quote-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .quote h2 {
+      color: #FFA500;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .quote p {
+      color: #a0b8cc;
+      margin-bottom: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #a0b8cc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    input,
+    select,
+    textarea {
+      background-color: #112240;
+      border: 1.5px solid #1e3a5f;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #FFA500;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #FFA500;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #e09400;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+ 
+    .service-card {
+      background: linear-gradient(145deg, #112240, #1a3a6e);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border-left: 5px solid #FFA500;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+ 
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+ 
+    .service-card h3 {
+      color: #FFA500;
+      font-size: 20px;
+      margin: 0 0 12px;
+    }
+ 
+    .service-card p {
+      color: #a0b8cc;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+ 
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+ 
+    .service-card ul li {
+      border-left: 3px solid #4ab3d4;
+      padding-left: 12px;
+      margin-bottom: 8px;
+      color: #cde;
+      font-size: 14px;
+    }
+ 
+    .service-card ul li:hover {
+      padding-left: 18px;
+    }
+ 
+    .pricing-strip {
+      background: #FFA500;
+      text-align: center;
+      padding: 30px 20px;
+    }
+ 
+    .pricing-strip h2 {
+      margin: 0 0 8px;
+      color: white;
+      font-size: 24px;
+    }
+ 
+    .pricing-strip p {
+      margin: 0 0 16px;
+      color: white;
+      font-size: 15px;
+    }
+ 
+    .pricing-strip a {
+      background: #0d1f3c;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+ 
+    .pricing-strip a:hover {
+      background: #1a3a6e;
+    }
+ 
+    .banner {
+      background-color: #112240;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-bottom: 2px solid #FFA500;
+    }
+ 
+    .banner a {
+      color: #FFA500;
+      font-weight: bold;
+      margin-left: 8px;
+      text-decoration: underline;
+    }
+ 
+    footer {
+      background-color: #07111f;
+      color: #a0b8cc;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+ 
+    footer a {
+      color: #FFA500;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#" class="nav-logo">CoolTech HVAC</a>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+
+    <img src="HVAC.png" alt="CoolTech HVAC Logo">
+    <h1>Cool<span>Tech</span> HVAC</h1>
+  </div>
+
+  <div class="services-grid">
+ 
+    <div class="service-card">
+      <h3>AC Repair</h3>
+      <p>Fast diagnosis and repair for all makes and models. We'll have your AC running again the same day.</p>
+      <ul>
+        <li>All major brands serviced</li>
+        <li>Same-day appointments available</li>
+        <li>Refrigerant recharge & leak repair</li>
+        <li>Thermostat troubleshooting</li>
+      </ul>
+    </div>
+ 
+    <div class="service-card">
+      <h3>Furnace Installation</h3>
+      <p>Energy-efficient furnace replacements and new installations for any home size or budget.</p>
+      <ul>
+        <li>Free in-home estimate</li>
+        <li>Gas & electric furnaces</li>
+        <li>Energy-efficient upgrades</li>
+        <li>Financing options available</li>
+      </ul>
+    </div>
+ 
+    <div class="service-card">
+      <h3>Air Duct Cleaning</h3>
+      <p>Remove dust, allergens, and debris from your ductwork to improve air quality and system efficiency.</p>
+      <ul>
+        <li>Full duct inspection included</li>
+        <li>HEPA-grade vacuum equipment</li>
+        <li>Mold & mildew treatment</li>
+        <li>Before & after photos provided</li>
+      </ul>
+    </div>
+ 
+    <div class="service-card">
+      <h3>Routine Maintenance</h3>
+      <p>Seasonal tune-ups to keep your system running smoothly and prevent costly breakdowns.</p>
+      <ul>
+        <li>Spring & fall tune-up plans</li>
+        <li>Filter replacement included</li>
+        <li>System efficiency report</li>
+        <li>Priority scheduling for members</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>New System Installation</h3>
+        <p>Full HVAC system design and installation for new construction or complete home replacements.</p>
+        <ul>
+          <li>Load calculation & system sizing</li>
+          <li>Smart thermostat integration</li>
+          <li>Zoning systems available</li>
+          <li>10-year labor warranty</li>
+        </ul>
+      </div>
+   
+      <div class="service-card">
+        <h3>Emergency Service</h3>
+        <p>HVAC emergencies don't wait for business hours — and neither do we. Available 24/7.</p>
+        <ul>
+          <li>24/7 availability</li>
+          <li>Rapid response dispatch</li>
+          <li>No after-hours surcharge</li>
+          <li>Fully stocked service vehicles</li>
+        </ul>
+      </div>
+   
+    </div>
+
+
+
+
+
+
+
+  <div class="banner"></div>
+    Spring AC Tune-Up Special — $79 (Save $40) — Limited Time! <a href="contact.html">Book Now</a>
+  </div>
+  <footer>
+    <p>© 2025 CoolTech HVAC Solutions · Nashville, TN · <a href="tel:+16155550000">(615) 555-0000</a> · <a href="contact.html">Contact Us</a></p>
+  </footer>
