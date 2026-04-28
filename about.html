@@ -38,20 +38,19 @@
       color: #4ab3d4;
     }
 
+    /* ── Hero ── */
     .hero {
       background: linear-gradient(180deg, #ffffff 90%, #0d1f3c);
       color: darkblue;
       text-align: center;
-      padding: 60px 20px;
+      padding: 60px 20px 0;
     }
 
-
-    .hero img {
+    .hero-logo {
       height: 200px;
       width: 400px;
       margin-bottom: 16px;
     }
-
 
     .hero h1 {
       font-size: 42px;
@@ -66,22 +65,50 @@
       font-size: 17px;
       color: darkblue;
       max-width: 500px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
       line-height: 1.6;
     }
 
+    /* ── Team photo — fades & rises in ── */
+    .hero-photo-wrap {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 0 -8px 40px rgba(74, 179, 212, 0.25);
+
+      /* start hidden: slightly below + transparent */
+      opacity: 0;
+      transform: translateY(30px);
+
+      animation: photoReveal 1s ease-out 0.3s forwards;
+    }
+
+    @keyframes photoReveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── rest of page ── */
     .s {
       display: flex;
       gap: 20px;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(180deg,#0d1f3c, #1a3a6e);
+      background: linear-gradient(180deg, #0d1f3c, #1a3a6e);
       color: orange;
       text-align: left;
       padding: 60px 20px;
     }
-
-   
 
     ul {
       list-style: none;
@@ -120,9 +147,8 @@
     .quote {
       background: linear-gradient(180deg, #1a3a6e, #0d1f3c);
       color: white;
-      padding: 60px 40px;
-      margin: 0 auto;
       padding: 60px 20px;
+      margin: 0 auto;
     }
 
     .quote-inner {
@@ -192,6 +218,23 @@
     button[type="submit"]:hover {
       background-color: #e09400;
     }
+
+    footer {
+      background-color: #0d1f3c;
+      color: #a0b8cc;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #4ab3d4;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -201,24 +244,24 @@
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
-    <a href="contact .html">Contact</a>
+    <a href="contact.html">Contact</a>  <!-- fixed: removed the space -->
   </nav>
 
   <div class="hero">
+    <img class="hero-logo" src="HVAC.png" alt="CoolTech HVAC Logo">
 
-    <img src="HVAC.png" alt="CoolTech HVAC Logo">
     <h1>Our Cool Story!</h1>
     <p><strong>What started as three college students complaining about their broken AC in the middle of a Nashville summer has now
-         turned into one of the city's most trusted heating and cooling companies. Alazar, Anusha, and Kayla had zero business experience, 
-         questionable life skills, and one shared dream: to never sweat through another August again. Fast forward 15 years and a few hundred 
-         thousand British Thermal Units later, CoolTech HVAC is still family-owned, still community-driven, and still showing up on time, which 
-         is more than we can say for the guys we used to call.</strong></p>
+       turned into one of the city's most trusted heating and cooling companies. Alazar, Anusha, and Kayla had zero business experience,
+       questionable life skills, and one shared dream: to never sweat through another August again. Fast forward 15 years and a few hundred
+       thousand British Thermal Units later, CoolTech HVAC is still family-owned, still community-driven, and still showing up on time, which
+       is more than we can say for the guys we used to call.</strong></p>
 
-         <img src="HVAC2.jpg" width="500" height="300" alt="HVAC man">
-  </div>
   
-
-
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="HVAC2.jpg" alt="HVAC technician on the job">
+    </div>
+  </div>
 
   <div class="banner">
     Spring AC Tune-Up Special — $79 (Save $40) — Limited Time! <a href="#">Book Now</a>
